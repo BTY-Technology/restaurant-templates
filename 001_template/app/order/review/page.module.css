@@ -1,0 +1,295 @@
+/* Header */
+.header {
+  padding: 3rem 0;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+/* Progress Bar */
+.progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.progressStep.active {
+  opacity: 1;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #666;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .stepNumber {
+  background: #d4af37;
+  color: white;
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.progressStep.active .stepLabel {
+  color: #1a1a1a;
+}
+
+.progressLine {
+  width: 60px;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 0 1rem;
+}
+
+.stepIndicator {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Main Section */
+.mainSection {
+  padding: 3rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* Form Section */
+.formSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.step {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.stepTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.stepDescription {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Review Section */
+.reviewSection {
+  display: grid;
+  gap: 2rem;
+}
+
+.reviewGroup {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.reviewGroup:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.reviewLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.editLink {
+  font-size: 0.875rem;
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.editLink:hover {
+  color: #b8941f;
+  text-decoration: underline;
+}
+
+.reviewText {
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.orderTypeText {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.instructions {
+  font-style: italic;
+  color: #666;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Order Items */
+.itemsList {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemName {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.itemInstructions {
+  font-size: 0.875rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.itemPrice {
+  font-weight: 600;
+  color: #d4af37;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.nextButton {
+  flex: 1;
+}
+
+/* Summary Section */
+.summarySection {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summarySection {
+    position: static;
+    order: -1;
+  }
+
+  .progressBar {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .progressLine {
+    width: 40px;
+    margin: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .itemPrice {
+    margin-left: 0;
+  }
+}

@@ -22,12 +22,11 @@
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/app/*": ["./app/*"],
-      "@/context/*": ["./context/*"],
-      "@/data/*": ["./data/*"],
       "@/lib/*": ["./lib/*"],
       "@/types/*": ["./types/*"],
       "@/utils/*": ["./utils/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/data/*": ["./data/*"],
+      "@/contexts/*": ["./contexts/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

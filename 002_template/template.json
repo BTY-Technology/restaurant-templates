@@ -1,0 +1,31 @@
+{
+  "id": "restaurant-002",
+  "name": "Template 002",
+  "category": "restaurant",
+  "description": "A modern, fully-responsive website template.",
+  "version": "1.0.0",
+  "featured": false,
+  "preview": {
+    "thumbnail": "/previews/restaurant-002/thumbnail.jpg",
+    "screenshots": [],
+    "demoUrl": "https://restaurant-002.website.btytechnology.com"
+  },
+  "features": [
+    "Responsive mobile design",
+    "SEO optimized",
+    "Modern design"
+  ],
+  "techStack": [
+    "Next.js 14",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "colors": {
+    "primary": "#1a1a1a",
+    "secondary": "#f5f5f5",
+    "accent": "#d4af37"
+  },
+  "pages": [
+    "Home"
+  ]
+}

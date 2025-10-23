@@ -1,0 +1,322 @@
+/* Header */
+.header {
+  padding: 3rem 0;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+/* Progress Bar */
+.progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.progressStep.active {
+  opacity: 1;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #666;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .stepNumber {
+  background: #d4af37;
+  color: white;
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.progressStep.active .stepLabel {
+  color: #1a1a1a;
+}
+
+.progressLine {
+  width: 60px;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 0 1rem;
+}
+
+.stepIndicator {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Main Section */
+.mainSection {
+  padding: 3rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* Form Section */
+.formSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.step {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.stepTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.stepDescription {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #1a1a1a;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Order Type Selection */
+.orderTypeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.orderTypeCard {
+  padding: 2rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.orderTypeCard:hover {
+  border-color: #d4af37;
+}
+
+.orderTypeCard.selected {
+  border-color: #d4af37;
+  background: #fffef8;
+}
+
+.orderTypeIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.orderTypeTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.orderTypeDescription {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.orderTypeFee {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* Address Section */
+.addressSection {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.pickupSection {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Location Selection */
+.locationGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.locationCard {
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.locationCard:hover {
+  border-color: #d4af37;
+}
+
+.locationCard.selected {
+  border-color: #d4af37;
+  background: #fffef8;
+}
+
+.locationName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.locationAddress {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.locationPhone {
+  font-size: 0.875rem;
+  color: #d4af37;
+  font-weight: 500;
+}
+
+/* Error Message */
+.errorMessage {
+  padding: 1rem;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 4px;
+  color: #c33;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.nextButton {
+  flex: 1;
+}
+
+/* Summary Section */
+.summarySection {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summarySection {
+    position: static;
+    order: -1;
+  }
+
+  .progressBar {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .progressLine {
+    width: 40px;
+    margin: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .orderTypeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,408 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 4rem 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+/* Story Section */
+.storySection {
+  padding: 5rem 0;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyImage {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.storyContent {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.sectionDescription {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Philosophy Section */
+.philosophySection {
+  padding: 5rem 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.philosophyCard {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.philosophyCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.philosophyCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.philosophyCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.philosophyCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.philosophyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.philosophyTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.philosophyText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Chefs Section */
+.chefsSection {
+  padding: 5rem 0;
+}
+
+.chefsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.chefsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Awards Section */
+.awardsSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  text-align: center;
+}
+
+.awardsSection .sectionTitle {
+  color: white;
+}
+
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.awardCard {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.awardCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.awardCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.awardCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.awardCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.awardCard:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.awardCard:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.awardCard:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+}
+
+.awardYear {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.awardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.awardOrg {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 5rem 0;
+}
+
+.valuesSection .sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.valuesList {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.valueItem {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.valueItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.valueItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.valueItem:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.valueItem:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.valueItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.valueNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d4af37;
+  line-height: 1;
+  min-width: 80px;
+}
+
+.valueContent {
+  flex: 1;
+}
+
+.valueTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.valueText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .chefsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .awardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valueItem {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .valueNumber {
+    font-size: 2.5rem;
+  }
+
+  .valueTitle {
+    font-size: 1.5rem;
+  }
+}

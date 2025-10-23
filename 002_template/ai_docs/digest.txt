@@ -1,0 +1,298 @@
+Directory structure:
+└── 002_template/
+    ├── README.md
+    ├── next.config.js
+    ├── package.json
+    ├── postcss.config.js
+    ├── tailwind.config.ts
+    ├── template.json
+    ├── tsconfig.json
+    └── .eslintrc.json
+
+================================================
+FILE: README.md
+================================================
+# [Business Name] - Next.js Template
+
+A modern, fully-responsive website template built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+- ✨ **Modern Design**: Clean, professional design with smooth animations
+- 📱 **Fully Responsive**: Mobile-first design that works on all devices
+- ⚡ **Next.js 14 App Router**: Latest Next.js features with server-side rendering
+- 🎨 **Tailwind CSS**: Utility-first CSS for rapid UI development
+- 📝 **TypeScript**: Type-safe code for better development experience
+- ♿ **Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+- 🔍 **SEO Optimized**: Proper meta tags, structured data, and semantic HTML
+
+## Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+2. Create environment variables:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Edit `.env.local` and add your configuration.
+
+3. Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+template/
+├── app/                      # Next.js 14 App Router
+├── components/              # React components
+├── lib/                     # Library code
+├── types/                   # TypeScript type definitions
+├── utils/                   # Utility functions
+├── public/                  # Static assets
+├── next.config.js          # Next.js configuration
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies
+```
+
+## Customization
+
+### Colors
+
+Edit `tailwind.config.ts` to customize the color scheme.
+
+### Content
+
+Add your business-specific content in the `app/` directory.
+
+## Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Deployment
+
+Deploy to [Vercel](https://vercel.com), [Netlify](https://www.netlify.com/), or your preferred hosting platform.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ by BTY Technology
+
+
+
+================================================
+FILE: next.config.js
+================================================
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+    formats: ['image/webp', 'image/avif'],
+  },
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'ALLOWALL',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+module.exports = nextConfig
+
+
+
+================================================
+FILE: package.json
+================================================
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
+
+
+
+================================================
+FILE: postcss.config.js
+================================================
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+
+
+================================================
+FILE: tailwind.config.ts
+================================================
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+export default config
+
+
+
+================================================
+FILE: template.json
+================================================
+{
+  "id": "restaurant-002",
+  "name": "Template 002",
+  "category": "restaurant",
+  "description": "A modern, fully-responsive website template.",
+  "version": "1.0.0",
+  "featured": false,
+  "preview": {
+    "thumbnail": "/previews/restaurant-002/thumbnail.jpg",
+    "screenshots": [],
+    "demoUrl": "https://restaurant-002.website.btytechnology.com"
+  },
+  "features": [
+    "Responsive mobile design",
+    "SEO optimized",
+    "Modern design"
+  ],
+  "techStack": [
+    "Next.js 14",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "colors": {
+    "primary": "#1a1a1a",
+    "secondary": "#f5f5f5",
+    "accent": "#d4af37"
+  },
+  "pages": [
+    "Home"
+  ]
+}
+
+
+
+================================================
+FILE: tsconfig.json
+================================================
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/app/*": ["./app/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/types/*": ["./types/*"],
+      "@/utils/*": ["./utils/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
+
+
+================================================
+FILE: .eslintrc.json
+================================================
+{
+  "extends": "next/core-web-vitals"
+}
+
+

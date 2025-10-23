@@ -1,0 +1,393 @@
+/* Header Section */
+.header {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  text-align: center;
+}
+
+.headerContent {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+/* Locations Section */
+.locationsSection {
+  padding: 4rem 0;
+}
+
+.locationsGrid {
+  display: grid;
+  gap: 3rem;
+}
+
+.locationCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  transition: box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.locationCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.locationCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.locationCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.locationCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.locationImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.locationCard:hover .image {
+  transform: scale(1.05);
+}
+
+.statusBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusDot.open {
+  background: #4caf50;
+}
+
+.statusDot.closed {
+  background: #f44336;
+}
+
+.locationContent {
+  padding: 2rem;
+}
+
+.locationHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.locationName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.mainBadge {
+  padding: 0.25rem 0.75rem;
+  background: #d4af37;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.infoSection {
+  margin-bottom: 1.5rem;
+}
+
+.infoLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.infoValue {
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.link {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #c49f2f;
+  text-decoration: underline;
+}
+
+.closedText {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.hoursSection {
+  margin-bottom: 1.5rem;
+}
+
+.hoursGrid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.day {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.time {
+  color: #666;
+}
+
+.featuresSection {
+  margin-bottom: 1.5rem;
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featureTag {
+  padding: 0.375rem 0.75rem;
+  background: #f0f0f0;
+  color: #444;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.viewMapButton {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewMapButton:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* Map Section */
+.mapSection {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+.mapTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.mapContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapContent {
+  text-align: center;
+  padding: 2rem;
+}
+
+.mapContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.mapContent p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.coordinates {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.openInMaps {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #d4af37;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.openInMaps:hover {
+  background: #c49f2f;
+}
+
+/* Pickup Section */
+.pickupSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.pickupContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pickupTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.pickupDescription {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.pickupButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .locationCard {
+    grid-template-columns: 1fr;
+  }
+
+  .locationImage {
+    min-height: 250px;
+  }
+
+  .locationName {
+    font-size: 1.5rem;
+  }
+
+  .locationHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .pickupTitle {
+    font-size: 2rem;
+  }
+
+  .pickupButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
