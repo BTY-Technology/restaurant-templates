@@ -1,3 +1,0 @@
-[DEBUG|/Users/cole/.local/pipx/venvs/ctxflow/lib/python3.12/site-packages/ctxflow/base.py|L42|_github_check] 2025-10-21T21:41:05-0500: URL/URI/URN GitHub Check: . <-> .
-[DEBUG|/opt/homebrew/Cellar/python@3.12/3.12.11/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/selector_events.py|L64|__init__] 2025-10-21T21:41:05-0500: Using selector: KqueueSelector
-[DEBUG|/Users/cole/.local/pipx/venvs/ctxflow/lib/python3.12/site-packages/ctxflow/cli.py|L296|ctx] 2025-10-21T21:41:07-0500: Gitingest: Analyzing source, output will be written to '/Users/cole/Documents/GitHub/build-btytechnology/templates/restaurant-templates/002_template/ai_docs/digest.txt'...
