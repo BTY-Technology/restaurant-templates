@@ -112,7 +112,7 @@ export default function OrderPage() {
               <div className={styles.step}>
                 <h2 className={styles.stepTitle}>Contact Information</h2>
                 <p className={styles.stepDescription}>
-                  We'll use this information to keep you updated about your order.
+                  We&apos;ll use this information to keep you updated about your order.
                 </p>
                 <div className={styles.formGrid}>
                   <Input

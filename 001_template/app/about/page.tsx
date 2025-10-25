@@ -166,7 +166,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.awardCard}>
               <div className={styles.awardYear}>2021</div>
-              <h3 className={styles.awardTitle}>Diner's Choice Award</h3>
+              <h3 className={styles.awardTitle}>Diner&apos;s Choice Award</h3>
               <p className={styles.awardOrg}>OpenTable</p>
             </div>
             <div className={styles.awardCard}>
@@ -218,7 +218,7 @@ export default function AboutPage() {
               <div className={styles.valueContent}>
                 <h3 className={styles.valueTitle}>Community Connection</h3>
                 <p className={styles.valueText}>
-                  We're proud to be part of the San Francisco community, supporting local suppliers
+                  We&apos;re proud to be part of the San Francisco community, supporting local suppliers
                   and giving back through various initiatives.
                 </p>
               </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
               <div className={styles.valueContent}>
                 <h3 className={styles.valueTitle}>Sustainability Focus</h3>
                 <p className={styles.valueText}>
-                  We're committed to sustainable practices, from sourcing to waste management,
+                  We&apos;re committed to sustainable practices, from sourcing to waste management,
                   ensuring a better future for generations to come.
                 </p>
               </div>

@@ -125,7 +125,7 @@ export default function LocationsPage() {
                     {/* Today's Hours */}
                     {todayHours && (
                       <div className={styles.infoSection}>
-                        <div className={styles.infoLabel}>Today's Hours</div>
+                        <div className={styles.infoLabel}>Today&apos;s Hours</div>
                         <div className={styles.infoValue}>
                           {todayHours.closed ? (
                             <span className={styles.closedText}>Closed</span>

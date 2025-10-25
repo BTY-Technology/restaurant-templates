@@ -64,20 +64,20 @@ function ConfirmationContent() {
     try {
       const response = await handoffToDoorDash({
         orderId: order.id,
-        restaurantAddress: {
+        pickupAddress: {
           street: '123 Main Street',
           city: 'San Francisco',
           state: 'CA',
           zipCode: '94102',
         },
         deliveryAddress: order.address!,
-        customerPhone: order.contactInfo.phone,
+        contactInfo: order.contactInfo,
+        orderTotal: order.cart.total,
         items: order.cart.items.map((item: any) => ({
           name: item.dish.name,
           quantity: item.quantity,
           price: item.dish.price,
         })),
-        subtotal: order.cart.subtotal,
       });
 
       if (response.success) {
@@ -287,7 +287,7 @@ function ConfirmationContent() {
                   <Button
                     onClick={handleHandoffToDoorDash}
                     disabled={isHandingOff}
-                    size="large"
+                    size="lg"
                   >
                     {isHandingOff ? 'Handing off to DoorDash...' : 'Hand Off to DoorDash'}
                   </Button>

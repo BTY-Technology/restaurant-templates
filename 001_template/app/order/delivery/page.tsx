@@ -186,7 +186,7 @@ export default function DeliveryPage() {
               <div className={styles.step}>
                 <h2 className={styles.stepTitle}>Delivery Options</h2>
                 <p className={styles.stepDescription}>
-                  Choose how you'd like to receive your order.
+                  Choose how you&apos;d like to receive your order.
                 </p>
 
                 {/* Order Type Selection */}

@@ -21,13 +21,6 @@ interface PageProps {
   };
 }
 
-// Generate static params for all dishes
-export function generateStaticParams() {
-  return dishes.map((dish) => ({
-    slug: dish.id,
-  }));
-}
-
 export default function DishPage({ params }: PageProps) {
   const dish = getDishById(params.slug);
   const relatedDishes = getRelatedDishes(params.slug);
@@ -105,7 +98,7 @@ export default function DishPage({ params }: PageProps) {
 
               {/* Badges */}
               <div className={styles.badges}>
-                {dish.featured && <Badge variant="accent">Featured</Badge>}
+                {dish.featured && <Badge variant="warning">Featured</Badge>}
                 {dish.popular && <Badge variant="primary">Popular</Badge>}
                 {dish.vegetarian && <Badge variant="success">Vegetarian</Badge>}
                 {dish.vegan && <Badge variant="success">Vegan</Badge>}
@@ -220,7 +213,7 @@ export default function DishPage({ params }: PageProps) {
 
                 <Button
                   onClick={handleAddToCart}
-                  size="large"
+                  size="lg"
                   className={styles.addToCartButton}
                 >
                   {addedToCart ? 'Added to Cart!' : 'Add to Cart'}

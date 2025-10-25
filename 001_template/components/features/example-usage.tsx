@@ -14,7 +14,7 @@ import {
   ChefCard,
   FilterState,
 } from '@/components/features';
-import { Dish } from '@/types/dish';
+import { Dish, SortOption } from '@/types/dish';
 import { Chef } from '@/types/chef';
 
 // =============================================================================
@@ -89,12 +89,12 @@ const CartSummaryExample = () => {
 
 const FilterBarExample = () => {
   const [filters, setFilters] = React.useState<FilterState>({
-    category: 'All',
-    sortBy: 'popular',
     dietary: [],
     priceRange: { min: 0, max: 50 },
     searchQuery: '',
   });
+
+  const [sortBy, setSortBy] = React.useState<SortOption>('popular');
 
   const handleFilterChange = (newFilters: FilterState) => {
     console.log('Filters changed:', newFilters);
@@ -102,10 +102,18 @@ const FilterBarExample = () => {
     // Apply filters to dish list
   };
 
+  const handleSortChange = (newSort: SortOption) => {
+    console.log('Sort changed:', newSort);
+    setSortBy(newSort);
+    // Apply sorting to dish list
+  };
+
   return (
     <FilterBar
       onFilterChange={handleFilterChange}
+      onSortChange={handleSortChange}
       currentFilters={filters}
+      currentSort={sortBy}
     />
   );
 };
@@ -184,19 +192,24 @@ const ChefCardExample = () => {
 
 const MenuPageExample = () => {
   const [filters, setFilters] = React.useState<FilterState>({
-    category: 'All',
-    sortBy: 'popular',
     dietary: [],
     priceRange: { min: 0, max: 50 },
     searchQuery: '',
   });
 
+  const [sortBy, setSortBy] = React.useState<SortOption>('popular');
   const [filteredDishes, setFilteredDishes] = React.useState<Dish[]>([]);
 
   const handleFilterChange = (newFilters: FilterState) => {
     setFilters(newFilters);
     // Apply filters to dishes
     // applyFilters(newFilters);
+  };
+
+  const handleSortChange = (newSort: SortOption) => {
+    setSortBy(newSort);
+    // Apply sorting to dishes
+    // applySorting(newSort);
   };
 
   const handleQuickView = (dish: Dish) => {
@@ -211,7 +224,9 @@ const MenuPageExample = () => {
         {/* Filter Bar */}
         <FilterBar
           onFilterChange={handleFilterChange}
+          onSortChange={handleSortChange}
           currentFilters={filters}
+          currentSort={sortBy}
         />
 
         {/* Dish Grid */}
