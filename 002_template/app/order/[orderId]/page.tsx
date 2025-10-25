@@ -113,7 +113,7 @@ export default function OrderTrackingPage() {
           </svg>
           <h2 className="text-2xl font-bold text-near-black mb-2">Order Not Found</h2>
           <p className="text-charcoal/80 mb-6">
-            We couldn't find the order you're looking for.
+            We couldn&apos;t find the order you&apos;re looking for.
           </p>
           <Button onClick={() => router.push('/')}>Return to Home</Button>
         </Card>

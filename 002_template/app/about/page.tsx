@@ -54,13 +54,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-charcoal/80 text-lg">
                 <p>
-                  It all started in 2018 when two food lovers, Marcus and Sarah, discovered a shared obsession: the perfect smash burger. After countless experiments in Marcus's backyard and Sarah's tireless recipe refinement, they knew they had something special.
+                  It all started in 2018 when two food lovers, Marcus and Sarah, discovered a shared obsession: the perfect smash burger. After countless experiments in Marcus&apos;s backyard and Sarah&apos;s tireless recipe refinement, they knew they had something special.
                 </p>
                 <p>
                   What began as a weekend pop-up quickly grew into a phenomenon. Lines formed around the block. People traveled from neighboring cities. The secret? Never cutting corners. Fresh, locally-sourced ingredients. Perfectly caramelized crusts. Pillowy potato buns. Every detail matters.
                 </p>
                 <p>
-                  Today, Smash & Stack has three locations across Portland, but our mission remains unchanged: serve the best damn burger you've ever tasted, with ingredients we're proud of and hospitality that feels like home.
+                  Today, Smash & Stack has three locations across Portland, but our mission remains unchanged: serve the best damn burger you&apos;ve ever tasted, with ingredients we&apos;re proud of and hospitality that feels like home.
                 </p>
               </div>
             </motion.div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
               Our Quality Promise
             </h2>
             <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
-              We're committed to serving food we're proud of, made with ingredients that meet our exacting standards.
+              We&apos;re committed to serving food we&apos;re proud of, made with ingredients that meet our exacting standards.
             </p>
           </motion.div>
 

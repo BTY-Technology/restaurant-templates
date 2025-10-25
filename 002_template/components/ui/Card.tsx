@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import clsx from 'clsx';
 
 interface CardProps {
@@ -8,12 +8,12 @@ interface CardProps {
   padding?: 'none' | 'sm' | 'md' | 'lg';
 }
 
-export const Card: React.FC<CardProps> = ({
+export const Card = forwardRef<HTMLDivElement, CardProps>(({
   children,
   className,
   hoverable = false,
   padding = 'md',
-}) => {
+}, ref) => {
   const paddingClasses = {
     none: '',
     sm: 'p-4',
@@ -23,6 +23,7 @@ export const Card: React.FC<CardProps> = ({
 
   return (
     <div
+      ref={ref}
       className={clsx(
         'bg-white rounded-lg shadow-md',
         hoverable && 'transition-all duration-300 hover:shadow-xl hover:-translate-y-1',
@@ -33,4 +34,6 @@ export const Card: React.FC<CardProps> = ({
       {children}
     </div>
   );
-};
+});
+
+Card.displayName = 'Card';

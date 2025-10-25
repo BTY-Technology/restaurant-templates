@@ -358,7 +358,7 @@ export default function LocationsPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="heading-md text-near-black mb-6">
-              Can't Make It In?
+              Can&apos;t Make It In?
             </h2>
             <p className="text-lg text-charcoal/70 mb-8 max-w-2xl mx-auto">
               Order delivery through our partners and get Smash & Stack delivered right to your door.

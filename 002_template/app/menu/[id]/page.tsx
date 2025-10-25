@@ -23,13 +23,6 @@ import {
 } from 'lucide-react';
 import clsx from 'clsx';
 
-// Generate static params for all menu items
-export function generateStaticParams() {
-  return menuItems.map((item) => ({
-    id: item.id,
-  }));
-}
-
 // Allergen icon component
 const AllergenIcon: React.FC<{ allergen: string }> = ({ allergen }) => (
   <div className="flex items-center gap-2 px-3 py-1.5 bg-red-50 border border-red-200 rounded-full">
@@ -67,7 +60,7 @@ export default function MenuItemPage() {
             Item Not Found
           </h1>
           <p className="text-charcoal/70 mb-6">
-            The menu item you're looking for doesn't exist
+            The menu item you&apos;re looking for doesn&apos;t exist
           </p>
           <Link href="/menu">
             <Button>Back to Menu</Button>

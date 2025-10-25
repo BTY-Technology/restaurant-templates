@@ -164,7 +164,7 @@ export default function HomePage() {
               Why Smash & Stack?
             </h2>
             <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
-              We're not just another burger joint. Here's what makes us special.
+              We&apos;re not just another burger joint. Here&apos;s what makes us special.
             </p>
           </motion.div>
 
