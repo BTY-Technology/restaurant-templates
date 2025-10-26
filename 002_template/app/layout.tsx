@@ -6,6 +6,7 @@ import { OrderProvider } from '@/contexts/OrderContext';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
+import { Watermark } from '@/components/Watermark';
 
 const anton = Anton({
   weight: '400',
@@ -21,7 +22,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Smash & Stack - Smashed to Perfection',
+  title: {
+    default: 'Smash & Stack - Smashed to Perfection | BTY Technology',
+    template: '%s | Smash & Stack | BTY Technology',
+  },
   description: 'Experience the ultimate smash burger. Fresh, locally-sourced ingredients, perfectly seasoned patties, and unforgettable flavors.',
   keywords: ['burger', 'smash burger', 'restaurant', 'food', 'fast food', 'delivery'],
   authors: [{ name: 'Smash & Stack' }],
@@ -62,9 +66,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/btyfavi.svg',
+    shortcut: '/btyfavi.svg',
+    apple: '/btyfavi.svg',
   },
   manifest: '/site.webmanifest',
 };
@@ -85,6 +89,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <CartDrawer />
+            <Watermark />
           </OrderProvider>
         </CartProvider>
       </body>

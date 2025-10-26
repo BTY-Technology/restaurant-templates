@@ -1,19 +1,35 @@
 {
   "id": "restaurant-001",
-  "name": "Template 001",
+  "name": "Chinese Restaurant",
   "category": "restaurant",
-  "description": "A modern, fully-responsive website template.",
+  "description": "A modern, full-featured Chinese restaurant website with online ordering, DoorDash integration, menu catalog, location finder, and newsletter signup.",
   "version": "1.0.0",
   "featured": false,
   "preview": {
     "thumbnail": "/previews/restaurant-001/thumbnail.jpg",
-    "screenshots": [],
+    "screenshots": [
+      "/previews/restaurant-001/home.jpg",
+      "/previews/restaurant-001/menu.jpg",
+      "/previews/restaurant-001/dish-detail.jpg",
+      "/previews/restaurant-001/about.jpg",
+      "/previews/restaurant-001/locations.jpg",
+      "/previews/restaurant-001/checkout.jpg",
+      "/previews/restaurant-001/confirmation.jpg"
+    ],
     "demoUrl": "https://restaurant-001.website.btytechnology.com"
   },
   "features": [
-    "Responsive mobile design",
-    "SEO optimized",
-    "Modern design"
+    "Online ordering with DoorDash integration",
+    "Multi-step checkout (delivery/pickup)",
+    "Menu catalog with filtering and search",
+    "Individual dish pages with nutrition info",
+    "Location finder with Google Maps",
+    "Newsletter signup",
+    "Shopping cart",
+    "SEO optimized with structured data",
+    "Responsive mobile-first design",
+    "Accessibility (WCAG 2.1 AA compliant)",
+    "Form validation"
   ],
   "techStack": [
     "Next.js 14",
@@ -21,11 +37,17 @@
     "Tailwind CSS"
   ],
   "colors": {
-    "primary": "#1a1a1a",
-    "secondary": "#f5f5f5",
-    "accent": "#d4af37"
+    "primary": "#1A1A1A",
+    "secondary": "#FFF9F0",
+    "accent": "#C4001D"
   },
   "pages": [
-    "Home"
+    "Home",
+    "Menu",
+    "Dish Detail",
+    "About",
+    "Locations",
+    "Order/Checkout",
+    "Order Confirmation"
   ]
 }

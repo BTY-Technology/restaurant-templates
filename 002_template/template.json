@@ -1,19 +1,37 @@
 {
   "id": "restaurant-002",
-  "name": "Template 002",
+  "name": "Burger Joint",
   "category": "restaurant",
-  "description": "A modern, fully-responsive website template.",
+  "description": "A production-ready burger restaurant website with online ordering, mock DoorDash integration, interactive menu catalog, location finder, and bold Americana diner aesthetic.",
   "version": "1.0.0",
   "featured": false,
   "preview": {
     "thumbnail": "/previews/restaurant-002/thumbnail.jpg",
-    "screenshots": [],
+    "screenshots": [
+      "/previews/restaurant-002/home.jpg",
+      "/previews/restaurant-002/menu.jpg",
+      "/previews/restaurant-002/item-detail.jpg",
+      "/previews/restaurant-002/about.jpg",
+      "/previews/restaurant-002/locations.jpg",
+      "/previews/restaurant-002/checkout.jpg",
+      "/previews/restaurant-002/order-tracking.jpg"
+    ],
     "demoUrl": "https://restaurant-002.website.btytechnology.com"
   },
   "features": [
-    "Responsive mobile design",
-    "SEO optimized",
-    "Modern design"
+    "Online ordering with mock DoorDash integration",
+    "Real-time order tracking with status timeline",
+    "Interactive menu catalog with filtering and search",
+    "Individual item pages with customizations",
+    "Shopping cart",
+    "Multi-step checkout (pickup/delivery)",
+    "Location finder with Google Maps",
+    "Newsletter signup",
+    "Form validation",
+    "Framer Motion animations",
+    "SEO optimized with structured data",
+    "Responsive mobile-first design",
+    "Accessibility (WCAG compliant)"
   ],
   "techStack": [
     "Next.js 14",
@@ -21,11 +39,17 @@
     "Tailwind CSS"
   ],
   "colors": {
-    "primary": "#1a1a1a",
-    "secondary": "#f5f5f5",
-    "accent": "#d4af37"
+    "primary": "#FF3131",
+    "secondary": "#F2EFEA",
+    "accent": "#FDBA21"
   },
   "pages": [
-    "Home"
+    "Home",
+    "Menu",
+    "Item Detail",
+    "About",
+    "Locations",
+    "Checkout",
+    "Order Tracking"
   ]
 }

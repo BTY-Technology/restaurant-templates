@@ -7,7 +7,11 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'strong': '0 10px 40px -15px rgba(0, 0, 0, 0.3)',
+      },
+    },
   },
   plugins: [],
 }

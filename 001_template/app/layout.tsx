@@ -5,6 +5,7 @@ import { CartProvider } from '@/context/CartContext';
 import { OrderProvider } from '@/context/OrderContext';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Watermark } from '@/components/Watermark';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const notoSerifSC = Noto_Serif_SC({
@@ -14,7 +15,10 @@ const notoSerifSC = Noto_Serif_SC({
 });
 
 export const metadata: Metadata = {
-  title: 'Golden Wok | Authentic Chinese Cuisine',
+  title: {
+    default: 'Golden Wok | Authentic Chinese Cuisine | BTY Technology',
+    template: '%s | Golden Wok | BTY Technology',
+  },
   description: 'Experience authentic Chinese cuisine with modern flair. Golden Wok offers the finest Sichuan and Cantonese dishes with online ordering and delivery.',
   keywords: ['Chinese restaurant', 'Sichuan cuisine', 'Cantonese food', 'online ordering', 'food delivery', 'dim sum', 'noodles', 'authentic Chinese'],
   authors: [{ name: 'Golden Wok' }],
@@ -52,9 +56,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/btyfavi.svg',
+    shortcut: '/btyfavi.svg',
+    apple: '/btyfavi.svg',
   },
 };
 
@@ -71,6 +75,7 @@ export default function RootLayout({
             <Header />
             <main className="main-content">{children}</main>
             <Footer />
+            <Watermark />
           </OrderProvider>
         </CartProvider>
       </body>
